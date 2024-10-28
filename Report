@@ -1,0 +1,32 @@
+# Neural Network Model Report & Analysis
+Module 21 Challenge
+
+## Overview of the analysis
+The purpose of this analysis is to examine a given dataset from a nonprofit foundation, Alphabet Soup, in order to create a model that can select applicants for funding based on the chance of success in their venture. This model uses the features in the data set that give metadata about the 34,000 organizations in the CSV, such as classification, income, and affiliation. These features were used to predict whether an application would be suucesful.
+
+## Results
+### Data Preprocessing
+- The target variable for this model is IS_SUCCESSFUL, which tells us if the organzation effectively used the funding given to them by Alphabet Soup
+- The feature variables include the following: 'APPLICATION_TYPE', 'AFFILIATION' (specifies the affiliated sector of industry), 'CLASSIFICATION' (as defined by government organization), 'USE_CASE' (the use case for funding), 'ORGANIZATION' (the type of organization applying), 'STATUS' (whether status of application is active or inactive), 'INCOME_AMT' (the income classification), 'SPECIAL_CONSIDERATIONS' (defines special considerations for application), & lastly, 'ASK_AMT' (the funding amount requested)
+- The variables removed from input data because they are neither targets nor variables are 'EIN' and 'NAME' which are identification columns of the applicants & do not give insight into the success of the organization's venture
+
+### Compiling, Training, and Evaluating the Model
+- Initially, I selected a baseline number of neurons and layers to build the basic model. There were two hidden layers with 80 in the first and 30 in the second. Each hidden layer had a ReLU activation and the output layer has a sigmoid activation for binary classification.
+- I was unable to achieve target model performance of 75% this way. Accuracy was reported at 73% (0.728)
+
+
+
+
+- To attempt to increase model performance, I made three modifications:
+1. Added a third hidden layer set at 20 neurons
+2. Decreased learning rate to 0.001 to allow for more stable & gradual convergence
+3. Increase number of epochs to 120 so the model will take smaller steps towards optimal weights
+
+
+### Summary
+- The modification made, unfortunately, did not meet achieve target model performance much better accurary rate. Accuracy was reported at 73% (0.730), again. Given the many features we have in this data, some deep learning models that may be worth examining with this data set could be Random Forest or Decision Trees, as both are more compatible with noisy data and can hanle categorical data. Perhaps, maybe even using PCA to transform features into a smaller set of uncorrelated variables can improve performance before running a machine learning model.
+
+
+Requirements:
+-----
+Format images in the report so that they display correction (2)
