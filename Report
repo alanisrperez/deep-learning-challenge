@@ -12,21 +12,25 @@ The purpose of this analysis is to examine a given dataset from a nonprofit foun
 
 ### Compiling, Training, and Evaluating the Model
 - Initially, I selected a baseline number of neurons and layers to build the basic model. There were two hidden layers with 80 in the first and 30 in the second. Each hidden layer had a ReLU activation and the output layer has a sigmoid activation for binary classification.
+
+![layers_basic_model.png](https://github.com/alanisrperez/deep-learning-challenge/blob/main/Images/layers_basic_model.png)
+
 - I was unable to achieve target model performance of 75% this way. Accuracy was reported at 73% (0.728)
 
-
-
+![eval_basic_model.png](https://github.com/alanisrperez/deep-learning-challenge/blob/main/Images/eval_basic_model.png)
 
 - To attempt to increase model performance, I made three modifications:
 1. Added a third hidden layer set at 20 neurons
+
+![layers_opt_model.png](https://github.com/alanisrperez/deep-learning-challenge/blob/main/Images/layers_opt_model.png)
+
 2. Decreased learning rate to 0.001 to allow for more stable & gradual convergence
+
+![learning_rate_opt_model.png](https://github.com/alanisrperez/deep-learning-challenge/blob/main/Images/learning_rate_opt_model.png)
+
 3. Increase number of epochs to 120 so the model will take smaller steps towards optimal weights
 
+![eval_opt_model.png](https://github.com/alanisrperez/deep-learning-challenge/blob/main/Images/eval_opt_model.png)
 
 ### Summary
 - The modification made, unfortunately, did not meet achieve target model performance much better accurary rate. Accuracy was reported at 73% (0.730), again. Given the many features we have in this data, some deep learning models that may be worth examining with this data set could be Random Forest or Decision Trees, as both are more compatible with noisy data and can hanle categorical data. Perhaps, maybe even using PCA to transform features into a smaller set of uncorrelated variables can improve performance before running a machine learning model.
-
-
-Requirements:
------
-Format images in the report so that they display correction (2)
