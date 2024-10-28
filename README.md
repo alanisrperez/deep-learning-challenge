@@ -20,3 +20,8 @@ Step 4: Write a Report on the Neural Network Model
 ------------
 For this part of the assignment, you’ll write a report on the performance of the deep learning model you created for Alphabet Soup.
 SEE 'REPORT' for analysis on model performance.
+
+
+References
+------------
+IRS. Tax Exempt Organization Search Bulk Data Downloads. https://www.irs.gov/
